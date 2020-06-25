@@ -1,7 +1,4 @@
-<?php include ('api/R2060761082126.api.php'); ?>
-<?php include ('api/R2068315875716.api.php'); ?>
-<?php include ('api/R240237361913389938.api.php'); ?>
-<?php include ('api/R240237364241304356.api.php'); ?>
+
 <!-- ห้องตรวจ 10 -->
 <style>
 .AutoScroll {
