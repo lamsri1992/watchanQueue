@@ -7,7 +7,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // add route
 const blogRoute = require('./routes/queue');
+
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 app.use('/', blogRoute);
 // set port & run server
 app.listen(port);
-// app.listen(port, () => console.log(`Example app listening on port ${port}!`));
