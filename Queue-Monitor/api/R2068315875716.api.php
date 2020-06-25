@@ -1,6 +1,6 @@
 <?php
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,'http://localhost:3000/servicepoint/2068315875716');
+curl_setopt($ch, CURLOPT_URL,'http://172.20.55.10:3000/servicepoint/2068315875716');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
 
