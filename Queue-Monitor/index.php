@@ -38,10 +38,7 @@ $p = $_GET['servicepoint'];
         <div class="container-fluid">
             <div id="background"></div>
             <div class="row">
-                <?php if ($p=='room'){ include ('service/room.php'); } ?>
-                <?php if ($p=='selector'){ include ('service/queue.selector.php'); } ?>
-                <?php if ($p=='queuecaller'){ include ('service/queue.caller.php'); } ?>
-                <?php if ($p=='triage'){ include ('service/queue.triage.php'); } ?>
+              
             </div>
         </div>
     </main>
