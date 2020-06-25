@@ -1,10 +1,10 @@
 const env = {
-    database: 'beta',
+    database: '23736',
     username: 'postgres',
-    password: 'ura6ubyny',
-    host: '172.20.55.10',
+    password: 'watchan',
+    host: '172.20.55.254',
     dialect: 'postgres',
-    port: '5433',
+    port: '5432',
     pool: {
       max: 5,
       min: 0,
