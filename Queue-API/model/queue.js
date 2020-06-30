@@ -38,6 +38,10 @@ module.exports = (sequelize, Sequelize) => {
         service_point_description: {
           type: Sequelize.STRING,
           field: 'service_point_description'
+        },
+        visit_queue_transfer_lab_status: {
+          type: Sequelize.STRING,
+          field: 'visit_queue_transfer_lab_status'
         }
       },
       {

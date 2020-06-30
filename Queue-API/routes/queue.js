@@ -36,7 +36,10 @@ route.get('/servicepoint/:b_service_point_id', async (req, res, next) => {
         },
         visit_queue_map_queue: {
           [Op.ne]: '0'
-        }
+        },
+        visit_queue_transfer_lab_status: {
+          [Op.eq]: '0'
+        },
       },
       order: [
         ['assign_date_time', 'ASC'],
