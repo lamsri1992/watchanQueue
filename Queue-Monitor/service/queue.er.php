@@ -74,7 +74,7 @@ $obs = $fnc->getQueueER($pdo, $observ);
                     <?php $i=0; foreach ($obs as $os){ $i++;?>
                     <tr>
                         <td><?=$i?></td>
-                        <td><?=$os['patient_firstname']." ".substr($os['patient_lastname'],1,10);?></td>
+                        <td><?=$os['patient_firstname'];?></td>
                         <td class="text-center"><?=substr($os['assign_date_time'],11,10)?></td>
                         <td class="text-center">
                             <?php 
