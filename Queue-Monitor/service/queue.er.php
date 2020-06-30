@@ -18,7 +18,7 @@ $obs = $fnc->getQueueER($pdo, $observ);
 }
 </style>
 <div class="col-md-6">
-    <div class="card-body text-center" style="background-color:green;border-radius: 25px;">
+    <div class="card-body text-center" style="background-color:#17a2b8;border-radius: 25px;">
         <h1 class="card-title" style="font-size:45px;color:white;"><i class="fa fa-user-injured"></i>
             คิวรอตรวจห้องฉุกเฉิน</h1>
         <div class="AutoScroll scroller" id="id-1" data-config='{"delay" : 5000 , "amount" : 90}'>
@@ -26,16 +26,16 @@ $obs = $fnc->getQueueER($pdo, $observ);
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>ชื่อ - นามสกุล</th>
-                        <th class="text-center"><i class="far fa-clock"></i> เวลาเข้ารับบริการ</th>
-                        <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับความรุนแรง</th>
+                        <th>ผู้ป่วย</th>
+                        <th class="text-center"><i class="far fa-clock"></i></th>
+                        <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับ</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="font-size:26px;">
                     <?php $i=0; foreach ($res as $rs){ $i++;?>
                     <tr>
                         <td><?=$i?></td>
-                        <td><?=$rs['patient_firstname']." ".substr($rs['patient_lastname'],1,10);?></td>
+                        <td><?=$rs['patient_firstname']?></td>
                         <td class="text-center"><?=substr($rs['assign_date_time'],11,10)?></td>
                         <td class="text-center">
                             <?php 
@@ -57,7 +57,7 @@ $obs = $fnc->getQueueER($pdo, $observ);
 </div>
 <!-- ห้องตรวจ 7 -->
 <div class="col-md-6">
-    <div class="card-body text-center" style="background-color:red;border-radius: 25px;">
+    <div class="card-body text-center" style="background-color:#6c757d;border-radius: 25px;">
         <h1 class="card-title" style="font-size:45px;color:white;"><i class="fa fa-procedures"></i> ผู้ป่วยนอนดูอาการ
         </h1>
         <div class="AutoScroll scroller" id="id-2" data-config='{"delay" : 5000 , "amount" : 100}'>
@@ -65,12 +65,12 @@ $obs = $fnc->getQueueER($pdo, $observ);
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>ชื่อ - นามสกุล</th>
-                        <th class="text-center"><i class="far fa-clock"></i> เวลาเข้ารับบริการ</th>
-                        <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับความรุนแรง</th>
+                        <th>ผู้ป่วย</th>
+                        <th class="text-center"><i class="far fa-clock"></i></th>
+                        <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับ</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody style="font-size:26px;">
                     <?php $i=0; foreach ($obs as $os){ $i++;?>
                     <tr>
                         <td><?=$i?></td>
@@ -101,6 +101,6 @@ $obs = $fnc->getQueueER($pdo, $observ);
 $(document).ready(function() {
     var refreshId = setInterval(function() {
         location.reload();
-    }, <?=$data_settime?> );
+    }, <?=$data_settime?>);
 });
 </script>
