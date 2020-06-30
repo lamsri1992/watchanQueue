@@ -42,6 +42,7 @@ $p = $_GET['servicepoint'];
                 <?php if ($p=='selector'){ include ('service/queue.selector.php'); } ?>
                 <?php if ($p=='queuecaller'){ include ('service/queue.caller.php'); } ?>
                 <?php if ($p=='triage'){ include ('service/queue.triage.php'); } ?>
+                <?php if ($p=='er'){ include ('service/queue.er.php'); } ?>
             </div>
         </div>
     </main>
