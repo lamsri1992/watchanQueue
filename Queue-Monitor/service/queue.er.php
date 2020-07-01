@@ -31,21 +31,21 @@ $obs = $fnc->getQueueER($pdo, $observ);
                         <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับ</th>
                     </tr>
                 </thead>
-                <tbody style="font-size:26px;">
+                <tbody style="font-size:35px;">
                     <?php $i=0; foreach ($res as $rs){ $i++;?>
                     <tr>
                         <td><?=$i?></td>
                         <td><?=$rs['patient_firstname']?></td>
-                        <td class="text-center"><?=substr($rs['assign_date_time'],11,10)?></td>
-                        <td class="text-center">
+                        <td class="text-center" style="vertical-align: middle;font-size:25px;"><?=substr($rs['assign_date_time'],11,10)?></td>
+                        <td class="text-center" style="vertical-align: middle;">
                             <?php 
-                            if($rs['f_emergency_status_id']==0){echo "<div style='background-color:white;color:red;border-radius: 25px;'>รอซักประวัติ</div>";}
-                            else if ($rs['f_emergency_status_id']==1){echo "<div style='background-color:black;color:white;border-radius: 25px;'>Non Urgent</div>";}
-                            else if ($rs['f_emergency_status_id']==2){echo "<div style='background-color:yellow;color:black;border-radius: 25px;'>Urgent</div>";}
-                            else if ($rs['f_emergency_status_id']==3){echo "<div style='background-color:pink;color:black;border-radius: 25px;'>Emergency</div>";}
-                            else if ($rs['f_emergency_status_id']==4){echo "<div style='background-color:red;color:white;border-radius: 25px;'>Resuscitation</div>";}
-                            else if ($rs['f_emergency_status_id']==5){echo "<div style='background-color:green;color:white;border-radius: 25px;'>Semi-Urgency</div>";}
-                            else {echo "<div style='background-color:white;color:red;border-radius: 25px;'>รอซักประวัติ</div>";}
+                            if($rs['f_emergency_status_id']==0){echo "<div style='background-color:white;color:red;border-radius: 25px;font-size:25px;'>รอซักประวัติ</div>";}
+                            else if ($rs['f_emergency_status_id']==1){echo "<div style='background-color:black;color:white;border-radius: 25px;font-size:25px;'>Non Urgent</div>";}
+                            else if ($rs['f_emergency_status_id']==2){echo "<div style='background-color:yellow;color:black;border-radius: 25px;font-size:25px;'>Urgent</div>";}
+                            else if ($rs['f_emergency_status_id']==3){echo "<div style='background-color:pink;color:black;border-radius: 25px;font-size:25px;'>Emergency</div>";}
+                            else if ($rs['f_emergency_status_id']==4){echo "<div style='background-color:red;color:white;border-radius: 25px;font-size:25px;'>Resuscitation</div>";}
+                            else if ($rs['f_emergency_status_id']==5){echo "<div style='background-color:green;color:white;border-radius: 25px;font-size:25px;'>Semi-Urgency</div>";}
+                            else {echo "<div style='background-color:white;color:red;border-radius: 25px;'font-size:25px;>รอซักประวัติ</div>";}
                             ?>
                         </td>
                     </tr>
@@ -70,21 +70,21 @@ $obs = $fnc->getQueueER($pdo, $observ);
                         <th class="text-center"><i class="fas fa-exclamation-circle"></i> ระดับ</th>
                     </tr>
                 </thead>
-                <tbody style="font-size:26px;">
+                <tbody style="font-size:35px;">
                     <?php $i=0; foreach ($obs as $os){ $i++;?>
                     <tr>
                         <td><?=$i?></td>
-                        <td><?=$os['patient_firstname'];?></td>
-                        <td class="text-center"><?=substr($os['assign_date_time'],11,10)?></td>
-                        <td class="text-center">
+                        <td><?=$os['patient_firstname']?></td>
+                        <td class="text-center" style="vertical-align: middle;font-size:25px;"><?=substr($os['assign_date_time'],11,10)?></td>
+                        <td class="text-center" style="vertical-align: middle;">
                             <?php 
-                            if($os['f_emergency_status_id']==0){echo "<div style='background-color:green;color:white;'>Undefine</div>";}
-                            else if ($os['f_emergency_status_id']==1){echo "<div style='background-color:black;color:white;border-radius: 25px;'>Non Urgent</div>";}
-                            else if ($os['f_emergency_status_id']==2){echo "<div style='background-color:yellow;color:dark;border-radius: 25px;'>Urgent</div>";}
-                            else if ($os['f_emergency_status_id']==3){echo "<div style='background-color:pink;color:dark;border-radius: 25px;'>Emergency</div>";}
-                            else if ($os['f_emergency_status_id']==4){echo "<div style='background-color:red;color:white;border-radius: 25px;'>Resuscitation</div>";}
-                            else if ($os['f_emergency_status_id']==5){echo "<div style='background-color:green;color:white;border-radius: 25px;'>Semi-Urgency</div>";}
-                            else {echo "<div style='background-color:green;color:white;border-radius: 25px;'>Undefine</div>";}
+                            if($os['f_emergency_status_id']==0){echo "<div style='background-color:white;color:red;border-radius: 25px;font-size:25px;'>รอซักประวัติ</div>";}
+                            else if ($os['f_emergency_status_id']==1){echo "<div style='background-color:black;color:white;border-radius: 25px;font-size:25px;'>Non Urgent</div>";}
+                            else if ($os['f_emergency_status_id']==2){echo "<div style='background-color:yellow;color:black;border-radius: 25px;font-size:25px;'>Urgent</div>";}
+                            else if ($os['f_emergency_status_id']==3){echo "<div style='background-color:pink;color:black;border-radius: 25px;font-size:25px;'>Emergency</div>";}
+                            else if ($os['f_emergency_status_id']==4){echo "<div style='background-color:red;color:white;border-radius: 25px;font-size:25px;'>Resuscitation</div>";}
+                            else if ($os['f_emergency_status_id']==5){echo "<div style='background-color:green;color:white;border-radius: 25px;font-size:25px;'>Semi-Urgency</div>";}
+                            else {echo "<div style='background-color:white;color:red;border-radius: 25px;'font-size:25px;>รอซักประวัติ</div>";}
                             ?>
                         </td>
                     </tr>
