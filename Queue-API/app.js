@@ -1,7 +1,7 @@
 // import express & define port = 3000
 const express = require('express');
 const app = express();
-const port = 3000;
+const port = 5550;
 // set use body json
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
